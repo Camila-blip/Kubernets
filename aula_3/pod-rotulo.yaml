@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-instance-1
+  labels:
+    app: myapp
+    instance: app-instance-1
+  annotations:
+    description: "This is the first instance of myapp"
+spec:
+  containers:
+    - name: myapp
+      image: nginx:latest
+      ports:
+        - containerPort: 80
